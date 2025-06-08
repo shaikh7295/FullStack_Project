@@ -1,0 +1,45 @@
+<div class="header">
+
+    <div class="profile-section">
+        <img class="profile-img" [src]="'http://localhost:5002/uploads/' + user?.image" alt="Profile" />
+        <div class="profile-name">
+            {{ user?.firstName }} {{ user?.lastName ||'' }}
+        </div>
+
+
+    </div>
+    <div class="logo">
+        <button class="logout-btn" (click)="logout()">Logout</button>
+    </div>
+
+
+</div>
+
+
+
+<div class="dashboard-container">
+    <!-- {{ user.image|json}} -->
+    <div class="user-card">
+        <div class="user-image">
+            <img *ngIf="user?.image" [src]="'http://localhost:5002/uploads/' + user.image" alt="Profile Image" />
+        </div>
+
+        <div class="user-info">
+            <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>DOB:</strong> {{ user.dob | date: 'mediumDate' }}</p>
+            <p><strong>Mobile:</strong> {{ user.mobileNumber }}</p>
+            <p><strong>Password:</strong> ******</p>
+            <button class="btn view-btn" (click)="openPortfolio()">View Portfolio</button>
+        </div>
+    </div>
+
+    <!-- Portfolio Popup -->
+    <div class="popup-backdrop" *ngIf="showPortfolio">
+        <div class="popup-box">
+            <h3>Portfolio</h3>
+            <p>This is your portfolio content.</p>
+            <button class="btn close-btn" (click)="closePortfolio()">Close</button>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,6 @@
 }
 .heading{
     text-align: center;
-  
 }
 
 .auth-form-wrapper {
@@ -114,8 +113,7 @@
 .form-footer a:hover {
   color: #5a67d8;
 }
-
-/* Register Form Two-column Style */
+ 
 .form-left {
   flex: 1 1 60%;
   padding: 40px;

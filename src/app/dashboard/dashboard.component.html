@@ -1,18 +1,13 @@
 <div class="header">
-
     <div class="profile-section">
         <img class="profile-img" [src]="'http://localhost:5002/uploads/' + user?.image" alt="Profile" />
         <div class="profile-name">
             {{ user?.firstName }} {{ user?.lastName ||'' }}
         </div>
-
-
     </div>
     <div class="logo">
         <button class="logout-btn" (click)="logout()">Logout</button>
     </div>
-
-
 </div>
 
 
@@ -33,13 +28,9 @@
             <button class="btn view-btn" (click)="openPortfolio()">View Portfolio</button>
         </div>
     </div>
-
-    <!-- Portfolio Popup -->
+ 
     <div class="popup-backdrop" *ngIf="showPortfolio">
-        <div class="popup-box">
-            <h3>Portfolio</h3>
-            <p>This is your portfolio content.</p>
-            <button class="btn close-btn" (click)="closePortfolio()">Close</button>
-        </div>
+        <app-portfolio-graph></app-portfolio-graph> 
+        <button class="btn close-btn" (click)="closePortfolio()">Close</button>
     </div>
 </div>

@@ -6,17 +6,24 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+// import { ChartsModule } from '@progress/kendo-angular-charts';
+// import 'hammerjs';
+import { NgxEchartsModule } from 'ngx-echarts';
+
+import { PortfolioGraphComponent } from './portfolio-graph/portfolio-graph.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    PortfolioGraphComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule // Import HttpClientModule for HTTP requests
+    HttpClientModule,
+    NgxEchartsModule.forRoot({ echarts: () => import('echarts') })
   ],
   providers: [],
   bootstrap: [AppComponent]

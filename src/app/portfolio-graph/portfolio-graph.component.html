@@ -1,0 +1,33 @@
+<div class="portfolio-wrapper">
+  
+  <div class="tenure-buttons">
+    <button *ngFor="let t of tenureOptions" (click)="loadData(t)" [class.active]="selectedTenure === t">
+      {{ t }}
+    </button>
+
+    <div class="chart-box">
+      <div class="info-box">
+        <h4>AGGREGATE ADV:</h4>
+        <h2>₹ {{ totalADV | number:'1.2-2' }} Cr.</h2>
+        <p class="as-on">as on {{ lastDate }}</p>
+
+        <div class="legend-values">
+          <div class="legend-item">
+            <span class="dot" style="background:#5470c6;"></span>
+            Equity: ₹ {{ equityValue | number:'1.2-2' }} Cr.
+          </div>
+          <div class="legend-item">
+            <span class="dot" style="background:#91cc75;"></span>
+            Debt: ₹ {{ debtValue | number:'1.2-2' }} Cr.
+          </div>
+          <div class="legend-item">
+            <span class="dot" style="background:#fac858;"></span>
+            Commodity: ₹ {{ commodityValue | number:'1.2-2' }} Cr.
+          </div>
+        </div>
+      </div>
+
+      <echarts [options]="chartOption" class="echart"></echarts>
+    </div>
+  </div>
+</div>

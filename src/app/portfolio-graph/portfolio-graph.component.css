@@ -1,0 +1,81 @@
+.portfolio-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+
+.info-box {
+  margin: 70px 0 0 0;
+  height: 100%;
+  background: #f7f9fc;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.info-box h4 {
+  margin-bottom: 4px;
+  color: #002b80;
+}
+
+.info-box h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #002b80;
+}
+
+.as-on {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.legend-values .legend-item {
+  margin: 8px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.legend-item .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+
+.chart-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.tenure-buttons {
+  margin-bottom: 16px;
+}
+
+.tenure-buttons button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: #f1f1f1;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tenure-buttons .active {
+  background-color: #002b80;
+  color: white;
+  border-color: #002b80;
+}
+
+.echart {
+  width: 70vw;
+  height: 400px;
+}

@@ -24,7 +24,7 @@ export class PortfolioGraphComponent implements OnInit {
 
   loadData(tenure: string) {
     this.selectedTenure = tenure;
-    const url = `http://localhost:5002/portfolio/${tenure}`;
+    const url = `https://backend-api-pxok.onrender.com/portfolio/${tenure}`;
 
     this.http.get<any>(url).subscribe(data => {
       const etf1 = data.response.portfolioData.data.ETF1;

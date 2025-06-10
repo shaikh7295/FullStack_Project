@@ -1,8 +1,8 @@
 <div class="header">
     <div class="profile-section">
-        <img class="profile-img" [src]="'http://localhost:5002/uploads/' + user?.image" alt="Profile" />
+        <img class="profile-img" [src]="'https://backend-api-pxok.onrender.com/uploads/' + user.image" alt="Profile" />
         <div class="profile-name">
-            {{ user?.firstName }} {{ user?.lastName ||'' }}
+            {{ user.firstName }} {{ user.lastName}}
         </div>
     </div>
     <div class="logo">
@@ -16,7 +16,7 @@
     <!-- {{ user.image|json}} -->
     <div class="user-card">
         <div class="user-image">
-            <img *ngIf="user?.image" [src]="'http://localhost:5002/uploads/' + user.image" alt="Profile Image" />
+            <img *ngIf="user?.image" [src]="'https://backend-api-pxok.onrender.com/uploads/' + user.image" alt="Profile Image" />
         </div>
 
         <div class="user-info">

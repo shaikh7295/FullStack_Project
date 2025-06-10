@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:5002'; 
+  private baseUrl = 'https://backend-api-pxok.onrender.com'; 
 
   constructor(private http: HttpClient) { }
 

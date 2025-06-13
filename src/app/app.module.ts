@@ -8,6 +8,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 // import { ChartsModule } from '@progress/kendo-angular-charts';
 // import 'hammerjs';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 import { NgxEchartsModule } from 'ngx-echarts';
 
 import { PortfolioGraphComponent } from './portfolio-graph/portfolio-graph.component';
@@ -25,7 +27,7 @@ import { PortfolioGraphComponent } from './portfolio-graph/portfolio-graph.compo
     HttpClientModule,
     NgxEchartsModule.forRoot({ echarts: () => import('echarts') })
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
